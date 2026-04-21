@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -74,20 +75,22 @@ export default function Navigation() {
           className="max-w-[72rem] mx-auto px-6 py-5 flex items-center justify-between"
           aria-label="Site navigation"
         >
-          {/* Logo */}
+          {/* Logo — rounded profile photo */}
           <button
             onClick={() => { setMenuOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-            style={{
-              fontFamily: "var(--font-display)",
-              fontWeight: 700,
-              fontSize: "18px",
-              letterSpacing: "-0.02em",
-              color: "var(--text-primary)",
-            }}
-            className="transition-colors duration-200 hover:text-[var(--accent-vivid)]"
+            className="flex-shrink-0 rounded-full overflow-hidden transition-all duration-200 hover:ring-2 hover:ring-offset-1"
+            style={{ borderRadius: "50%", border: "2px solid var(--border-accent)" }}
             aria-label="Back to top"
           >
-            PM
+            <Image
+              src="/profile.jpeg"
+              alt="Poulami Mukherjee"
+              width={36}
+              height={36}
+              className="rounded-full object-cover block"
+              style={{ width: "36px", height: "36px" }}
+              priority
+            />
           </button>
 
           {/* Desktop nav links */}

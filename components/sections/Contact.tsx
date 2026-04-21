@@ -405,7 +405,7 @@ export default function Contact() {
                 className="w-full py-4 pm-field"
                 style={{
                   borderRadius: "6px",
-                  background: "linear-gradient(135deg, #7B5EA7, #9D6FFF)",
+                  background: "linear-gradient(135deg, #B0691A, #E3922A)",
                   color: "white",
                   fontFamily: "var(--font-body)",
                   fontSize: "14px",

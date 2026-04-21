@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, DM_Sans, JetBrains_Mono } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono, Caveat } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import Navigation from "@/components/layout/Navigation";
-import CustomCursor from "@/components/layout/CustomCursor";
 
-const spaceGrotesk = Space_Grotesk({
-  weight: ["400", "500", "600", "700"],
+const fraunces = Fraunces({
   subsets: ["latin"],
   variable: "--font-display",
   display: "swap",
+  style: ["normal", "italic"],
+  axes: ["opsz"],
 });
 
-const dmSans = DM_Sans({
-  weight: ["300", "400", "500", "600"],
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
@@ -23,6 +22,13 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
   subsets: ["latin"],
   variable: "--font-mono",
+  display: "swap",
+});
+
+const caveat = Caveat({
+  weight: ["600"],
+  subsets: ["latin"],
+  variable: "--font-script",
   display: "swap",
 });
 
@@ -61,7 +67,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${dmSans.variable} ${jetbrainsMono.variable} antialiased`}
+      className={`${fraunces.variable} ${inter.variable} ${jetbrainsMono.variable} ${caveat.variable} antialiased`}
     >
       <head>
         <script
@@ -99,7 +105,6 @@ export default function RootLayout({
       </head>
       <body>
         <Providers>
-          <CustomCursor />
           <Navigation />
           {children}
         </Providers>

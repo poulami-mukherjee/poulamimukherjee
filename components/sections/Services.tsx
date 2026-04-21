@@ -107,8 +107,8 @@ export default function Services() {
         <a
           href="mailto:hello@poulamimukherjee.com"
           className="inline-flex items-center gap-2 transition-colors duration-150"
-          style={{ padding: "12px 28px", borderRadius: "6px", background: "linear-gradient(135deg, #7B5EA7, #9D6FFF)", fontFamily: "var(--font-body)", fontWeight: 500, fontSize: "14px", color: "white" }}
-          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 0 44px rgba(155,111,255,0.5)")}
+          style={{ padding: "12px 28px", borderRadius: "6px", background: "linear-gradient(135deg, #B0691A, #E3922A)", fontFamily: "var(--font-body)", fontWeight: 500, fontSize: "14px", color: "white" }}
+          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 0 44px rgba(227,146,42,0.5)")}
           onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
         >
           Book a discovery call →

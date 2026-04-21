@@ -59,7 +59,7 @@ function CaseCard({ c, index }: { c: typeof CASES[0]; index: number }) {
         onMouseEnter={(e) => {
           e.currentTarget.style.background = "var(--bg-elevated)";
           e.currentTarget.style.borderColor = "var(--border-accent)";
-          e.currentTarget.style.boxShadow = "0 20px 60px rgba(108,92,231,0.08)";
+          e.currentTarget.style.boxShadow = "0 20px 60px rgba(14,59,58,0.10)";
           e.currentTarget.style.transform = "translateY(-3px)";
         }}
         onMouseLeave={(e) => {
@@ -185,7 +185,7 @@ export default function SelectedWork() {
             flexShrink: 0,
             padding: "12px 28px",
             borderRadius: "6px",
-            background: "linear-gradient(135deg, #7B5EA7, #9D6FFF)",
+            background: "linear-gradient(135deg, #B0691A, #E3922A)",
             fontFamily: "var(--font-body)",
             fontWeight: 500,
             fontSize: "14px",
@@ -193,7 +193,7 @@ export default function SelectedWork() {
             textDecoration: "none",
             whiteSpace: "nowrap",
           }}
-          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 0 44px rgba(155,111,255,0.5)")}
+          onMouseEnter={(e) => (e.currentTarget.style.boxShadow = "0 0 44px rgba(227,146,42,0.5)")}
           onMouseLeave={(e) => (e.currentTarget.style.boxShadow = "none")}
         >
           Talk about your project →
